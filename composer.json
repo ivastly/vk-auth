@@ -1,0 +1,24 @@
+{
+    "name": "anfa/vk-auth",
+    "type": "library",
+    "description": "tiny lib to get vk auth cookie (remixsid) using valid mobile phone number and password",
+    "keywords": ["vkontakte", "vk", "authorization", "remixsid"],
+    "minimum-stability": "dev",
+    "license": "WTFPL",
+    "authors": [
+        {
+            "name": "anfa",
+            "email": "vastlyvastly@gmail.com",
+            "homepage": "http://github.com/biganfa/vk-auth"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "VkAuth\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^5.3.3",
+        "guzzlehttp/guzzle": "^6.2"
+    }
+}
