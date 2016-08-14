@@ -1,2 +1,3 @@
 .idea
 vendor/*
+test_login_pass_constants.php
