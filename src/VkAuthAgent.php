@@ -36,6 +36,7 @@ class VkAuthAgent
 
         $this->cell = $cell;
         $this->password = $password;
+        $this->logFilePath = $responsesDumpFilePath;
         $this->verboseCallback = $verboseCallback;
 
         if ($this->logFilePath) {

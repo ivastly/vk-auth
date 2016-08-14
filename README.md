@@ -23,7 +23,7 @@ $jar = $agent->getAuthorizedCookieJar();
 # example
 
 there is an example.php command-line script. It will print friends list of the account.
- Tu run it, you need to create a file called _test_login_pass_constants.php_
+ To run it, you need to create a file called _test_login_pass_constants.php_
 which contains two required constants (valid vk mobile phone & password), e.g.
 
 ```php
