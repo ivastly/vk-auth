@@ -4,7 +4,9 @@ tiny lib to get vk auth cookie (remixsid) using valid mobile phone number and pa
 
 # install via composer
 
+```bash
 composer require biganfa/vk-auth
+```
 
 
 # usage
