@@ -3,7 +3,6 @@
     "type": "library",
     "description": "tiny lib to get vk auth cookie (remixsid) using valid mobile phone number and password",
     "keywords": ["vkontakte", "vk", "authorization", "remixsid"],
-    "minimum-stability": "dev",
     "license": "WTFPL",
     "authors": [
         {
