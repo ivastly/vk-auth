@@ -85,7 +85,7 @@ class VkAuthAgent
         $password = trim($password);
 
 
-        $ua = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36';
+        $ua = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36';
 
         $jar = $this->cookieJar;
         $httpVkComClient = new Client([
@@ -114,7 +114,7 @@ class VkAuthAgent
 
         preg_match('/name="ip_h" value="(.+)"/', $body, $matches);
         $ip_h = $matches[1];
-        preg_match('/name="lg_h" value="(.+)"/', $body, $matches);
+        preg_match('/name="lg_domain_h" value="(.+)"/', $body, $matches);
         $lg_h = $matches[1];
 
         $this->verbose("ip_h and lg_h params parsed: $ip_h | $lg_h");
@@ -155,7 +155,7 @@ class VkAuthAgent
                     'captcha_key' => '',
                     '_origin' => 'http://vk.com',
                     'ip_h' => $ip_h,
-                    'lg_h' => $lg_h,
+                    'lg_domain_h' => $lg_h,
                     'email' => $cell,
                     'pass' => $password,
                 ]
