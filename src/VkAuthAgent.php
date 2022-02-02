@@ -115,12 +115,12 @@ class VkAuthAgent
         preg_match('/name="ip_h" value="(.+)"/', $body, $matches);
         $ip_h = $matches[1];
         preg_match('/name="lg_domain_h" value="(.+)"/', $body, $matches);
-        $lg_h = $matches[1];
+        $lg_domain_h = $matches[1];
 
-        $this->verbose("ip_h and lg_h params parsed: $ip_h | $lg_h");
+        $this->verbose("ip_h and lg_domain_h params parsed: $ip_h | $lg_domain_h");
 
-        if (!$ip_h || !$lg_h) {
-            throw new VkAuthException($cell, $password, "bad vk html, ip_h & lg_h fields not found $body");
+        if (!$ip_h || !$lg_domain_h) {
+            throw new VkAuthException($cell, $password, "bad vk html, ip_h & lg_domain_h fields not found $body");
         }
 
         $httpsLoginVkComClient = new Client([
@@ -155,7 +155,7 @@ class VkAuthAgent
                     'captcha_key' => '',
                     '_origin' => 'http://vk.com',
                     'ip_h' => $ip_h,
-                    'lg_domain_h' => $lg_h,
+                    'lg_domain_h' => $lg_domain_h,
                     'email' => $cell,
                     'pass' => $password,
                 ]
